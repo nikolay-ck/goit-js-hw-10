@@ -1,18 +1,174 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  background-color: #fafafad7;
+  color: #212121;
+  line-height: 1.5;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.timer {
+  display: flex;
+  gap: 24px;
+  margin-left: 156px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: 40px;
+  text-align: center;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #cfcfcf;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #989898;
+  border: none;
+  line-height: 24px;
+
+  border-radius: 8px;
+  padding: 8px 16px;
+
+  display: inline-block;
+}
+
+button.is-active {
+  background-color: #4e75ff;
+  color: white;
+}
+
+button.is-active:hover {
+  background-color: #6c8cff;
+}
+
+.back {
+  text-align: center;
+  background-color: #4e75ff;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+
+  padding: 8px 16px;
+
+  display: block;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back:hover {
+  background-color: #6c8cff;
+}
+
+input {
+  padding: 8px 16px;
+  border: 1px solid #8584846f;
+  border-radius: 4px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  outline: none;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  border-color: #000000;
+}
+
+#datetime-picker {
+  margin: 36px 0 32px 156px;
+  width: 272px;
+}
+
+.form {
+  margin-left: 156px;
+  margin-top: 36px;
+  width: 360px;
+}
+
+.form>label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+fieldset {
+  padding: 8px 16px;
+  border: 1px solid #8584846f;
+  border-radius: 4px;
+
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+fieldset:hover,
+fieldset:focus-within {
+  border-color: #000000;
+}
+
+.form button {
+  background-color: #4e75ff;
+  color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  outline: none;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
